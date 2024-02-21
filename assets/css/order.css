@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+}
+body {
+    inset: 0;
+    width: 100%;
+    background-color:rgba(192,192,192,0.2);
+}
+.order_page_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_container {
+    margin: 40px 0;
+    width: 40%;
+    height: 800px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

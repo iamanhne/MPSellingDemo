@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+}
+body {
+    inset: 0;
+}
+:root{
+    --color-esqueleto:#EFF3F5;
+}
+.container {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .search {
+    position: absolute;
+    left: 100px;
+}
+.container .shopping {
+    position: absolute;
+    right: 200px;
+}
+.container a {
+    color: black;
+}
+.container .user {
+    position: absolute;
+    right: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .user_logged {
+    position: absolute;
+    right: 60px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user .user_container {
+    display:none;
+    position: absolute;
+    top: 70px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+.user_logged .user_logged_container {
+    display:none;
+    position: absolute;
+    top: 70px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+.user .user_container li {
+    padding: 10px;
+}
+.user_logged .user_logged_container li {
+    padding: 10px;
+}
+.user .user_container li a {
+    color: black;
+    font-size: 0.9rem;
+}
+.user_logged .user_logged_container li a {
+    color: black;
+    font-size: 0.9rem;
+}
+.user:hover .user_container {
+    display: block;
+}
+.user_logged:hover .user_logged_container {
+    display: block;
+}
+
+.container .logo_img>img {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    
+}
+.container::after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 80%;
+    top: 110px;
+    background-color: black;
+}
+.nav {
+    margin-top: 15px;
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background:#fff;
+    z-index: 1;
+}
+.nav .nav_ul {
+    display: flex;
+}
+.nav .nav_ul>li {
+    padding: 14px;
+}
+.nav .nav_ul>li a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 50px;
+}
+.nav_ul .sub_menu {
+    display:none;
+    position: absolute;
+    top:50px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.nav_ul .sub_menu li{
+    padding: 10px 20px;
+}
+.nav .nav_ul>li:hover .sub_menu {
+    display: block;
+    animation: modalFadeIn ease-in-out 0.6s;
+} 
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateZ(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
